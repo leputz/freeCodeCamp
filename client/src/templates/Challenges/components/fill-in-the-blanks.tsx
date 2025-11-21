@@ -70,7 +70,7 @@ function FillInTheBlanks({
                     type='text'
                     maxLength={blankAnswers[value].length + 3}
                     className={getInputClass(value)}
-                    onChange={handleInputChange}
+                    onChange={e => handleInputChange(value, e.target.value)}
                     data-index={node.value}
                     size={blankAnswers[value].length}
                     autoComplete='off'
